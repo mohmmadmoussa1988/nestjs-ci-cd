@@ -10,7 +10,16 @@ jobs:
       - node/install-packages
       - run:
           command: npm run test
+  echo-sentence:
+    executor:
+      name: node/default
+    steps:
+      -checkout
+      -run:
+        name: 'Mohammad'
+        command: echo 'Hello Mohammad'
 workflows:
   build-and-test:
     jobs:
       - build-and-test
+      - echo-sentence
