@@ -20,11 +20,9 @@ jobs:
           command: echo "Hello Mohammad"
 workflows:
   version: 2
-  build-and-test:
-    jobs:
-      - build-and-test
   echo-after-build:
     jobs:
+      - build-and-test
       - echo-sentence:
           requires:
             - build-and-test
