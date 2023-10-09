@@ -22,4 +22,8 @@ workflows:
   build-and-test:
     jobs:
       - build-and-test
-      - echo-sentence
+  echo-after-build:
+    jobs:
+      - echo-sentence:
+          requires:
+            - build-and-test
