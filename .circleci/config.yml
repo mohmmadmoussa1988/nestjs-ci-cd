@@ -16,8 +16,8 @@ jobs:
     steps:
       - checkout
       - run:
-        name: Echo Mohammad
-        command: echo "Hello Mohammad"
+          name: Echo Mohammad
+          command: echo "Hello Mohammad"
 workflows:
   build-and-test:
     jobs:
